@@ -136,6 +136,14 @@ class MakefileGenerator implements PluginInterface, EventSubscriberInterface
             $rows[] = 'composer';
         }
 
+        if (file_exists('phpunit.xml.dist')) {
+            $rows[] = 'phpunit';
+        }
+
+        if (file_exists('behat.yml.dist') || file_exists('behat.yaml.dist')) {
+            $rows[] = 'behat';
+        }
+
         if (file_exists('package-lock.json')) {
             $rows[] = 'npm';
         }

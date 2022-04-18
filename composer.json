@@ -4,6 +4,7 @@
     "type": "composer-plugin",
     "require": {
         "php": ">=7.4",
+        "ext-json": "*",
         "composer-plugin-api": "^2.0",
         "composer/composer": "^2.0"
     },
@@ -15,9 +16,12 @@
     },
     "autoload": {
         "psr-0": {
-            "MakefileGenerator": "src/"
+            "PhpMakefileInstall": "src"
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "bin": [
+        "bin/php-makefile-integration-cli"
+    ]
 }

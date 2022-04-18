@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+if (file_exists(__DIR__ . '/../../autoload.php')) {
+    //for composer
+    require_once __DIR__ . '/../../autoload.php';
+}
+
+$script = new MakefileGenerator();
+$script->integration();
